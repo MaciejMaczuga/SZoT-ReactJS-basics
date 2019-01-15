@@ -1,0 +1,95 @@
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition:
+    color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
+}
+
+.btn {
+  margin: 30px 10px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn--increment {
+  color: #ffffff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn--increment:active {
+  color: #ffffff;
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+
+.btn--increment:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38,143,255,.5);
+}
+
+.btn--increment:hover {
+  color: #ffffff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn--decrement {
+  color: #ffffff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn--decrement:active {
+  color: #ffffff;
+  background-color: #1e7e34;
+  border-color: #1c7430;
+}
+
+.btn--decrement:focus {
+  box-shadow: 0 0 0 0.2rem rgba(72,180,97,.5);
+}
+
+.btn--decrement:hover {
+  color: #ffffff;
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn--reset {
+  color: #212529;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.btn--reset:active {
+  color: #212529;
+  background-color: #d39e00;
+  border-color: #c69500;
+}
+
+.btn--reset:focus {
+  box-shadow: 0 0 0 0.2rem rgba(222,170,12,.5);
+}
+
+.btn--reset:hover {
+  color: #212529;
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
