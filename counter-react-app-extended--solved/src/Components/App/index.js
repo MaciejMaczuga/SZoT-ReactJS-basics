@@ -1,27 +1,27 @@
 import React, { Component } from 'react';
 
-import Display from '../Display';
-import Button from '../Button';
+import Display from './Display';
+import Button from './Button';
 import './style.css';
 
-class Counter extends Component {
+class App extends Component {
   state = {
     count: 0,
   }
 
-  onIncrementClick = () => {
+  handleIncrementClick = () => {
     this.setState({
       count: this.state.count + 1,
     });
   }
 
-  onDecrementClick = () => {
+  handleDecrementClick = () => {
     this.setState({
       count: this.state.count -1,
     });
   }
 
-  onResetClick = () => {
+  handleResetClick = () => {
     this.setState({
       count: 0,
     })
@@ -35,17 +35,17 @@ class Counter extends Component {
         />
         <Button
           classes="btn btn--increment"
-          handleClick={this.onIncrementClick}
+          onClick={this.handleIncrementClick}
           buttonContent="increment"
         />
         <Button
           classes="btn btn--decrement"
-          handleClick={this.onDecrementClick}
+          onClick={this.handleDecrementClick}
           buttonContent="decrement"
         />
         <Button
           classes="btn btn--reset"
-          handleClick={this.onResetClick}
+          onClick={this.handleResetClick}
           buttonContent="reset"
         />
       </div>
@@ -53,4 +53,4 @@ class Counter extends Component {
   }
 }
 
-export default Counter;
+export default App;

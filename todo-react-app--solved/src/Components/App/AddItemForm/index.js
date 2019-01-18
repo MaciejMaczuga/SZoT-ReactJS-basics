@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
+
 import './style.css';
 
-class ToDoList extends PureComponent {
+class AddItemForm extends PureComponent {
   componentDidUpdate() {
     this.props.textInput.current.focus();
   }
@@ -10,13 +11,13 @@ class ToDoList extends PureComponent {
     return (
       <form
         className="form"
-        onSubmit={this.props.handleOnSubmit}
+        onSubmit={this.props.onSubmit}
       >
         <input
           className="form__input"
           placeholder="Type your tasks"
           value={this.props.ongoingTask.text}
-          onChange={this.props.handleOnChange}
+          onChange={this.props.onChange}
           ref={this.props.textInput}
         />
         <button
@@ -30,4 +31,4 @@ class ToDoList extends PureComponent {
   }
 }
 
-export default ToDoList;
+export default AddItemForm;

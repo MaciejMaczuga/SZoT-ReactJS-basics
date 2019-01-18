@@ -5,7 +5,7 @@ import './style.css';
 const Button = (props) => {
   const handleButtonClick = event => {
     event.preventDefault();
-    props.handleClick();
+    props.onClick();
   }
 
   return (

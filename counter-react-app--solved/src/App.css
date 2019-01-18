@@ -1,3 +1,21 @@
+.counter {
+  box-sizing: border-box;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.counter__display {
+  width: 250px;
+  text-align: center;
+  padding: .375rem .75rem;
+  margin: auto;
+  font-size: 3rem;
+  line-height: 1.5;
+  color: #000000;
+  background-color: #8080803d;
+  border: 1px solid #8080806b;
+}
+
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -8,7 +26,6 @@
   padding: .375rem .75rem;
   font-size: 1rem;
   line-height: 1.5;
-  border-radius: .25rem;
   transition:
     color .15s ease-in-out,
     background-color .15s ease-in-out,

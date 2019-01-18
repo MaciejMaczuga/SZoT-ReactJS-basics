@@ -1,7 +1,8 @@
 import React, { PureComponent, createRef } from 'react';
 
-import ToDoList from '../ToDoList';
-import ToDoTasks from '../ToDoTasks';
+import AddItemForm from './AddItemForm';
+import ItemsList from './ItemsList';
+import { mockupTaskList } from '../../Utilities/data';
 import './style.css';
 
 class App extends PureComponent {
@@ -15,37 +16,15 @@ class App extends PureComponent {
   inputElement = createRef();
 
   componentWillMount() {
-    const catchedTaskList = localStorage.getItem('toDoList');
+    const catchedTaskList = localStorage.getItem('ToDoList');
     if(catchedTaskList) {
       this.setState({
         tasks: JSON.parse(catchedTaskList),
       });
     }
-
-    // const mockupTaskList = [
-    //   {
-    //   text: "Go sleep well",
-    //   key: 1,
-    //   },
-    //   {
-    //     text: "Wake up early",
-    //     key: 2,
-    //   },
-    //   {
-    //     text: "Eat breakfast",
-    //     key: 3,
-    //   },
-    //   {
-    //     text: "Go to work and have fun",
-    //     key: 4,
-    //   },
-    // ];
-    // this.setState({
-    //   tasks: mockupTaskList,
-    // });
   }
 
-  handleInput = event => {
+  handleInputChange = event => {
     const taskText = event.target.value;
     const currentTask = {
       text: taskText,
@@ -68,7 +47,7 @@ class App extends PureComponent {
           key: '',
         }
       });
-      localStorage.setItem('toDoList', JSON.stringify(tasks));
+      localStorage.setItem('ToDoList', JSON.stringify(tasks));
     }
   }
 
@@ -79,21 +58,21 @@ class App extends PureComponent {
     this.setState({
       tasks: filteredTasks,
     })
-    localStorage.setItem('toDoList', JSON.stringify(filteredTasks));
+    localStorage.setItem('ToDoList', JSON.stringify(filteredTasks));
   }
 
   render() {
     return (
       <div className="main-container">
-        <ToDoList
-          handleOnChange={this.handleInput}
-          handleOnSubmit={this.addTask}
+        <AddItemForm
+          onChange={this.handleInputChange}
+          onSubmit={this.addTask}
           ongoingTask={this.state.currentTask}
           textInput={this.inputElement}
         />
-        <ToDoTasks
-          taskEntries={this.state.tasks}
-          handleDeleteTask={this.deleteTask}
+        <ItemsList
+          formEntries={this.state.tasks}
+          onClick={this.deleteTask}
         />
       </div>
     );

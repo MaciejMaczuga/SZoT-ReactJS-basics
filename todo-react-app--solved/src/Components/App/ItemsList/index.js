@@ -1,17 +1,18 @@
 import React from 'react';
+
 import './style.css';
 
-const ToDoTasks = (props) => {
-  const createTasks = tasks => tasks.map(task => {
+const ItemsList = (props) => {
+  const renderItems = items => items.map(item => {
     return (
       <li
         className="task-item"
-        key={task.key}
+        key={item.key}
       >
-        <button className="btn btn--task">{task.text}</button>
+        <button className="btn btn--task">{item.text}</button>
         <button
           className="btn btn--delete"
-          onClick={() => props.handleDeleteTask(task.key)}
+          onClick={() => props.onClick(item.key)}
         >
           delete
         </button>
@@ -21,9 +22,9 @@ const ToDoTasks = (props) => {
 
   return (
     <ul className="tasks-container">
-      {createTasks(props.taskEntries)}
+      {renderItems(props.formEntries)}
     </ul>
   );
 };
 
-export default ToDoTasks;
+export default ItemsList;

@@ -11,11 +11,13 @@ class Counter extends Component {
       count: this.state.count + 1,
     });
   }
+
   onDecrementClick = () => {
     this.setState({
       count: this.state.count - 1,
     });
   }
+
   onResetClick = () => {
     this.setState({
       count: 0,
@@ -48,7 +50,5 @@ class Counter extends Component {
     );
   }
 }
-
-
 
 export default Counter;
