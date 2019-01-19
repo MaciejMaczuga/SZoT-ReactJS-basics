@@ -2,11 +2,11 @@
 const integers = [1, 2, 3];
 const ages = [23, 42, 6, 18];
 // const updatedIntegers = integers.map(function(number) {
-//    return number += 1
+//   return number += 1
 // });
 
 // const adults = ages.filter(function(age) {
-//     return age > 20
+//   return age > 20
 // });
 
 // const updatedIntegers = integers.map((number) => {
@@ -21,7 +21,7 @@ const ages = [23, 42, 6, 18];
 
 // const adults = ages.filter((age) => age > 20);
 
-// const updatedIntegers = integers.map(number => number += 1);
+const updatedIntegers = integers.map(number => number += 1);
 
 const adults = ages.filter(age => age > 20);
 
