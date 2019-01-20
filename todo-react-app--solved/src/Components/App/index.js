@@ -1,4 +1,4 @@
-import React, { PureComponent, createRef } from 'react';
+import React, { PureComponent } from 'react';
 
 import AddItemForm from './AddItemForm';
 import ItemsList from './ItemsList';
@@ -13,7 +13,6 @@ class App extends PureComponent {
       key: '',
     }
   }
-  inputElement = createRef();
 
   componentWillMount() {
     const catchedTaskList = localStorage.getItem('ToDoList');
@@ -68,7 +67,6 @@ class App extends PureComponent {
           onChange={this.handleInputChange}
           onSubmit={this.addTask}
           ongoingTask={this.state.currentTask}
-          textInput={this.inputElement}
         />
         <ItemsList
           formEntries={this.state.tasks}

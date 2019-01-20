@@ -1,11 +1,13 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, createRef } from 'react';
 import PropTypes from 'prop-types';
 
 import './style.css';
 
 class AddItemForm extends PureComponent {
+  inputElement = createRef();
+
   componentDidUpdate() {
-    this.props.textInput.current.focus();
+    this.inputElement.current.focus();
   }
 
   render() {
@@ -19,7 +21,7 @@ class AddItemForm extends PureComponent {
           placeholder="Type your tasks"
           value={this.props.ongoingTask.text}
           onChange={this.props.onChange}
-          ref={this.props.textInput}
+          ref={this.inputElement}
         />
         <button
           className="btn btn--add-task"
@@ -32,10 +34,10 @@ class AddItemForm extends PureComponent {
   }
 }
 
-export default AddItemForm;
-
 AddItemForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   ongoingTask: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired
 }
+
+export default AddItemForm;

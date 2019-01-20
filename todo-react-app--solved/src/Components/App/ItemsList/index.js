@@ -28,9 +28,9 @@ const ItemsList = (props) => {
   );
 };
 
-export default ItemsList;
-
 ItemsList.propTypes = {
   onClick: PropTypes.func.isRequired,
   formEntries: PropTypes.array.isRequired,
 }
+
+export default ItemsList;
