@@ -6,8 +6,8 @@
   - _counter-react-app--solved_ first exercise application __counter__,
   - _counter-react-app-extended--solved_ second exercise application __counter extended__,
   - _todo-react-app--solved_ third exercise application __to do list__,
-  - _counter-react-app--class_ first and second application __counter__ coded during the class,
-  - _todo-react-app--class_ third application __to do list__ plus extra features coded during the class,
+  - _counter-react-app--classes_ first and second application __counter__ coded during the class,
+  - _todo-react-app--classes_ third application __to do list__ plus extra features coded during the class,
 
 ---
 [Paweł Skwirowski GitHub Profile](https://github.com/skwirowski "Paweł Skwirowski GitHub")

@@ -1,0 +1,27 @@
+.users {
+  padding: 20px;
+  margin: 50px 0;
+  background: #007bff96;
+  box-sizing: border-box;
+}
+
+.users:nth-child(even) {
+  background: #e153618f;
+}
+
+.users__pic {
+  border-radius: 50%;
+  border: 3px solid white;
+  float: left;
+  margin-right: 20px;
+}
+
+.users__name {
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-left: 25px;
+}
+
+.users__phone {
+  font-style: italic;
+}
